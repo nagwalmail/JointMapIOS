@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		548AA57525B6EB4D00EA8F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548AA57325B6EB4D00EA8F1C /* Main.storyboard */; };
 		548AA57725B6EB4E00EA8F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548AA57625B6EB4E00EA8F1C /* Assets.xcassets */; };
 		548AA57A25B6EB4E00EA8F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548AA57825B6EB4E00EA8F1C /* LaunchScreen.storyboard */; };
+		548AA58925B6FC6700EA8F1C /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AA58825B6FC6700EA8F1C /* LocalDataSource.swift */; };
+		548AA58C25B6FCEC00EA8F1C /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AA58B25B6FCEC00EA8F1C /* ApplicationServices.swift */; };
+		548AA59025B6FD5C00EA8F1C /* RailroadRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AA58F25B6FD5C00EA8F1C /* RailroadRepository.swift */; };
+		548AA59825B7025800EA8F1C /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 548AA59725B7025800EA8F1C /* data.sqlite */; };
 		E1E86C26568A4C335DA60F34 /* Pods_JointMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBBD833D70EF4B1A8A364D3 /* Pods_JointMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		548AA57625B6EB4E00EA8F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		548AA57925B6EB4E00EA8F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		548AA57B25B6EB4E00EA8F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		548AA58825B6FC6700EA8F1C /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		548AA58B25B6FCEC00EA8F1C /* ApplicationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServices.swift; sourceTree = "<group>"; };
+		548AA58F25B6FD5C00EA8F1C /* RailroadRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailroadRepository.swift; sourceTree = "<group>"; };
+		548AA59725B7025800EA8F1C /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
 		92E2EF7AD510D48CF75D9668 /* Pods-JointMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JointMap.release.xcconfig"; path = "Target Support Files/Pods-JointMap/Pods-JointMap.release.xcconfig"; sourceTree = "<group>"; };
 		BF09B10497924D26943A077A /* Pods-JointMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JointMap.debug.xcconfig"; path = "Target Support Files/Pods-JointMap/Pods-JointMap.debug.xcconfig"; sourceTree = "<group>"; };
 		EBBBD833D70EF4B1A8A364D3 /* Pods_JointMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JointMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +56,6 @@
 				BF09B10497924D26943A077A /* Pods-JointMap.debug.xcconfig */,
 				92E2EF7AD510D48CF75D9668 /* Pods-JointMap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +88,7 @@
 		548AA56C25B6EB4D00EA8F1C /* JointMap */ = {
 			isa = PBXGroup;
 			children = (
+				548AA59725B7025800EA8F1C /* data.sqlite */,
 				548AA56D25B6EB4D00EA8F1C /* AppDelegate.swift */,
 				548AA56F25B6EB4D00EA8F1C /* SceneDelegate.swift */,
 				548AA57125B6EB4D00EA8F1C /* ViewController.swift */,
@@ -88,6 +96,9 @@
 				548AA57625B6EB4E00EA8F1C /* Assets.xcassets */,
 				548AA57825B6EB4E00EA8F1C /* LaunchScreen.storyboard */,
 				548AA57B25B6EB4E00EA8F1C /* Info.plist */,
+				548AA58825B6FC6700EA8F1C /* LocalDataSource.swift */,
+				548AA58B25B6FCEC00EA8F1C /* ApplicationServices.swift */,
+				548AA58F25B6FD5C00EA8F1C /* RailroadRepository.swift */,
 			);
 			path = JointMap;
 			sourceTree = "<group>";
@@ -152,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				548AA57A25B6EB4E00EA8F1C /* LaunchScreen.storyboard in Resources */,
+				548AA59825B7025800EA8F1C /* data.sqlite in Resources */,
 				548AA57725B6EB4E00EA8F1C /* Assets.xcassets in Resources */,
 				548AA57525B6EB4D00EA8F1C /* Main.storyboard in Resources */,
 			);
@@ -206,6 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548AA58925B6FC6700EA8F1C /* LocalDataSource.swift in Sources */,
+				548AA59025B6FD5C00EA8F1C /* RailroadRepository.swift in Sources */,
+				548AA58C25B6FCEC00EA8F1C /* ApplicationServices.swift in Sources */,
 				548AA57225B6EB4D00EA8F1C /* ViewController.swift in Sources */,
 				548AA56E25B6EB4D00EA8F1C /* AppDelegate.swift in Sources */,
 				548AA57025B6EB4D00EA8F1C /* SceneDelegate.swift in Sources */,
